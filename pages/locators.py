@@ -26,3 +26,22 @@ class ModelContent:
     EMAIL = (By.CSS_SELECTOR, "#orders-email")
     DESCRIPTION = (By.CSS_SELECTOR, "#orders-description")
     SUBMIT_CONTENT = (By.CSS_SELECTOR, "#submitUniqueForm")
+
+
+class OurWork:
+    OUR_WORK = (By.CSS_SELECTOR, "#cssmenu > ul > li:nth-child(3) > a")
+
+
+class Works:
+    WORKS = (By.CSS_SELECTOR, "body > div:nth-child(3) > div:nth-child(2) > div > div > p > button")
+
+
+class WorkImages:
+    WORK_IMAGES = (By.CSS_SELECTOR, "div.col-md-3")
+    WORK_IMAGE = (By.CSS_SELECTOR, "body > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > a > img")
+
+
+class ArrowKey:
+    RIGHT_KEY = (By.CSS_SELECTOR, "body > div.mfp-wrap.mfp-gallery.mfp-close-btn-in.mfp-auto-cursor.mfp-img-mobile.mfp-ready > div > button.mfp-arrow.mfp-arrow-right.mfp-prevent-close")
+    LEFT_KEY = (By.CSS_SELECTOR, "body > div.mfp-wrap.mfp-gallery.mfp-close-btn-in.mfp-auto-cursor.mfp-img-mobile.mfp-ready > div > button.mfp-arrow.mfp-arrow-left.mfp-prevent-close")
+    MFP_CLOSE = (By.CSS_SELECTOR, ".mfp-close")

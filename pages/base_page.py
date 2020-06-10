@@ -1,6 +1,7 @@
 from .locators import HomeLink
 from .locators import ContactLink
 from .locators import PrivateOrder
+from . locators import OurWork
 
 
 class BasePage:
@@ -19,6 +20,11 @@ class BasePage:
 
     def go_tu_contact_page(self):
         link = self.browser.find_element(*ContactLink.CONTACT_LINK)
+        link.click()
+
+    def go_tu_our_work_page(self):
+        self.is_element_present(*OurWork.OUR_WORK)
+        link = self.browser.find_element(*OurWork.OUR_WORK)
         link.click()
 
     def go_tu_private_order(self):
