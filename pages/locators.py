@@ -10,7 +10,7 @@ class ContactLink:
 
 
 class ContactPages:
-    INSTA_LINK = (By.CSS_SELECTOR, "body > div:nth-child(3) > div > p:nth-child(5) > a:nth-child(2)")
+    INSTA_LINK = (By.CSS_SELECTOR, ".social-link")
     FB_LINK = (By.CSS_SELECTOR, "body > div:nth-child(3) > div > p:nth-child(5) > a:nth-child(3)")
     VK_LINK = (By.CSS_SELECTOR, "body > div:nth-child(3) > div > p:nth-child(5) > a:nth-child(4)")
 

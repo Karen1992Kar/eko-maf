@@ -2,6 +2,7 @@ from .locators import HomeLink
 from .locators import ContactLink
 from .locators import PrivateOrder
 
+
 class BasePage:
     def __init__(self, browser, url):
         self.browser = browser

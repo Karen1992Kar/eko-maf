@@ -7,23 +7,19 @@ link = "http://xn----7sbzhhkhe0bh1c.xn--p1ai/web/"
 
 
 @pytest.mark.home_link
-@pytest.mark.xfail
 def test_home_button(browser):
     page = MainPage(browser, link)
     page.open()
     page.home_link()
 
 
-@pytest.mark.xfail
 @pytest.mark.contact_check
 def test_contact_page(browser):
     page = ContactPage(browser, link)
     page.open()
     page.contact_link()
     page.go_tu_contact_page()
-    page.page_instagram()
-    page.page_vk()
-    page.page_facebook()
+    page.social_link()
     time.sleep(5)
 
 
