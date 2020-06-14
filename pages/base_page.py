@@ -3,14 +3,14 @@ from .locators import ContactLink
 from .locators import PrivateOrder
 from . locators import OurWork
 from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
 from .locators import OrderButton
 from selenium.webdriver.support.ui import WebDriverWait
 from .locators import Row
 from selenium.webdriver.support import expected_conditions as EC
+import unittest
 
 
-class BasePage:
+class BasePage(Row, unittest.TestCase):
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
@@ -19,12 +19,12 @@ class BasePage:
         if self.is_element_present(*Row.DIV_ROW):
             res = len(self.browser.find_elements(*Row.ROW))
             for row in range(1, res):
-                follow = WebDriverWait(browser, 30).until(EC.presence_of_element_located((By.XPATH, "(/html/body/div[2]/div/div)[" + str(row) + "]/div/p/button")))
+                follow = WebDriverWait(browser, 30).until(EC.presence_of_element_located((self.cards(row))))
                 follow.click()
                 self.rekurs_comrade_for_sale(browser)
                 browser.back()
         elif self.is_element_present(*OrderButton.ORDER_BUTTON):
-            print("vse ok")
+            browser.back()
 
     def open(self):
         self.browser.get(self.url)
@@ -62,3 +62,9 @@ class BasePage:
         except NoSuchElementException:
             return False
         return True
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+

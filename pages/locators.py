@@ -50,6 +50,10 @@ class ArrowKey:
 class Row:
     ROW = (By.CSS_SELECTOR, "div.col-md-3 button")
     DIV_ROW = (By.CSS_SELECTOR, "body > div:nth-child(3) > div")
+    DIV_ROW_COL_MD_3 = (By.CSS_SELECTOR, "body > div:nth-child(3) > div.col-md-3")
+    def cards(self, number):
+        CARDS = (By.XPATH, f"/html/body/div[2]/div/div[{str(number)}]/div/p/button")
+        return CARDS
 
 
 class Menu:
@@ -57,4 +61,6 @@ class Menu:
 
 
 class OrderButton:
-    ORDER_BUTTON = (By.CSS_SELECTOR, "body > div:nth-child(3) > div:nth-child(2) > div.col-md-3.col-sm-4.product-options.well > button")
+    ORDER_BUTTON = (By.CSS_SELECTOR, "div.col-md-3.col-sm-4.product-options.well > button")
+
+
