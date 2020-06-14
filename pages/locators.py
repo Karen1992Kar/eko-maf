@@ -45,3 +45,16 @@ class ArrowKey:
     RIGHT_KEY = (By.CSS_SELECTOR, "body > div.mfp-wrap.mfp-gallery.mfp-close-btn-in.mfp-auto-cursor.mfp-img-mobile.mfp-ready > div > button.mfp-arrow.mfp-arrow-right.mfp-prevent-close")
     LEFT_KEY = (By.CSS_SELECTOR, "body > div.mfp-wrap.mfp-gallery.mfp-close-btn-in.mfp-auto-cursor.mfp-img-mobile.mfp-ready > div > button.mfp-arrow.mfp-arrow-left.mfp-prevent-close")
     MFP_CLOSE = (By.CSS_SELECTOR, ".mfp-close")
+
+
+class Row:
+    ROW = (By.CSS_SELECTOR, "div.col-md-3 button")
+    DIV_ROW = (By.CSS_SELECTOR, "body > div:nth-child(3) > div")
+
+
+class Menu:
+    LIES = (By.CSS_SELECTOR, '#menu li')
+
+
+class OrderButton:
+    ORDER_BUTTON = (By.CSS_SELECTOR, "body > div:nth-child(3) > div:nth-child(2) > div.col-md-3.col-sm-4.product-options.well > button")

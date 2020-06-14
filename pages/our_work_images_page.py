@@ -14,7 +14,7 @@ class OurWorkImagesPage(BasePage):
         self.is_element_present(*ArrowKey.RIGHT_KEY)
         images = len(self.browser.find_elements(*WorkImages.WORK_IMAGES))
         for _ in range(images):
-            self.browser.find_element(*ArrowKey.RIGHT_KEY).click()
+            self.browser.find_element(*ArrowKey.RIGHT_KEY).send_keys(u'\ue007')
 
         for _ in range(images):
             self.browser.find_element(*ArrowKey.LEFT_KEY).click()

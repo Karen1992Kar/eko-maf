@@ -8,14 +8,15 @@ import pytest
 link = "http://xn----7sbzhhkhe0bh1c.xn--p1ai/web/"
 
 
-@pytest.mark.home_link
+@pytest.mark.home_link                  # проверка кнопки главная
 def test_home_button(browser):
     page = MainPage(browser, link)
     page.open()
-    page.home_link()
+    page.rows(browser)
+    time.sleep(3)
 
 
-@pytest.mark.contact_check
+@pytest.mark.contact_check              # проверка контакт
 def test_contact_page(browser):
     page = ContactPage(browser, link)
     page.open()
@@ -25,7 +26,7 @@ def test_contact_page(browser):
     time.sleep(5)
 
 
-@pytest.mark.private_order
+@pytest.mark.private_order              # проверка работы
 def test_private_order(browser):
     page = PrivateOrder(browser, link)
     page.open()
@@ -34,7 +35,7 @@ def test_private_order(browser):
     time.sleep(5)
 
 
-@pytest.mark.our_work
+@pytest.mark.our_work                   # проверка фото работы
 def test_our_work(browser):
     page = OurWorkPage(browser, link)
     page.open()
@@ -46,6 +47,12 @@ def test_our_work(browser):
     time.sleep(5)
 
 
+@pytest.mark.menu
+def test_menu(browser):
+    page = MainPage(browser, link)
+    page.open()
+    page.menu_check(browser)
+    time.sleep(3)
 
 
 
